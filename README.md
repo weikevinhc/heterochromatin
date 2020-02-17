@@ -17,14 +17,17 @@ Rscript qqenrich ref.chip ref.input sample.chip sample.input spike.chip spike.in
 <strong>Infer per basepair coverage around a macs2 peak (gcov.macsrange.peak.pl):</strong><br />
 Based on macs2 peak calling, determine the enrichment +/- **N** base pairs around each peak. Requires an enrichment profile file that has three tab-delimited columns of chromosome name, position (every basepiar in the genome), and log2(normalized chip/normalized input). To be used with enrich.heatmap.R (see below). <br />
 Usage: <br />
+
 perl gcov.macsrange.peak.pl macs2.peak enrichment.file N > output.enrich.range <br /> <br />
 
 <strong>Heatmap of enrichment around peaks (enrich.heatmap.R):</strong><br />
 Generates heatmap of the the enrich.range file (From gcov.macsrange.peak.pl). Requires the r color package RColorBrewer. <br />
 Usage: <br />
+
 Rscript enrich.heatmap.R file.enrich.range <br /> <br />
 
 <strong>Collapse overlapping peaks from different macs2 peak-calling on replicates (peakcountbywindow.pl):</strong><br />
 Determine the number of peaks that are overlapping (by default within 100bp of each other) across separate replicates. MACS2 peakcalling was applied to each individual replicate. <br />
 Usage: <br />
+
 perl peakcountbywindow.pl rep1.macs2.peak rep2.macs2.peak rep3.macs2.peak ... > combined.peaks <br /> <br />
