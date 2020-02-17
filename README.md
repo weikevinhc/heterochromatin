@@ -24,4 +24,7 @@ Generates heatmap of the the enrich.range file (From gcov.macsrange.peak.pl). Re
 Usage: <br />
 Rscript enrich.heatmap.R file.enrich.range <br /> <br />
 
-
+<strong>Collapse overlapping peaks from different macs2 peak-calling on replicates (peakcountbywindow.pl):</strong><br />
+Determine the number of peaks that are overlapping (by default within 100bp of each other) across separate replicates. MACS2 peakcalling was applied to each individual replicate. <br />
+Usage: <br />
+perl peakcountbywindow.pl rep1.macs2.peak rep2.macs2.peak rep3.macs2.peak ... > combined.peaks <br /> <br />
